@@ -1,5 +1,5 @@
 import React from "react";
-import ProfilePic from "../assets/profilepic.jpg"; // Ensure this is correctly placed
+import ProfilePic from "../assets/profilepic.jpg"; 
 
 const AboutPage: React.FC = () => {
   return (
