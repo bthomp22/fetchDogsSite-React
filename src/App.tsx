@@ -23,10 +23,11 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <Router>
+    <Router basename='/fetchDogsSite-React/'>
       <Navbar isAuthenticated={isAuthenticated} setAuth={setIsAuthenticated} />
       <Routes>
         <Route path="/" element={isAuthenticated ? <Navigate to="/search" /> : <LoginPage setAuth={setIsAuthenticated} />} />
+        
         <Route path="/search" element={isAuthenticated ? <SearchPage favorites={favorites} setFavorites={setFavorites} /> : <Navigate to="/" />} />
         <Route path="/match" element={isAuthenticated ? <MatchPage favorites={[]} /> : <Navigate to="/" />} />
         <Route path="/about" element={<AboutPage />} />
