@@ -118,12 +118,12 @@ const SearchPage: React.FC<{ favorites: string[], setFavorites: React.Dispatch<R
   return (
     <div className="w-full min-h-screen p-6 mx-auto max-w-7xl ">
       <h1 className="text-2xl font-bold mb-4">Search Dogs</h1>
-      <div className="flex items-center gap-4 justify-center">
+      <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 w-full justify-center">
         <BreedFilter breeds={breeds} selectedBreed={selectedBreed} onSelectBreed={setSelectedBreed} />
         <select
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
-          className="border p-2 rounded-lg"
+          className="border p-2 rounded-lg w-full sm:w-auto"
         >
           <option value="breed:asc">Breed (A-Z)</option>
           <option value="breed:desc">Breed (Z-A)</option>
@@ -136,7 +136,7 @@ const SearchPage: React.FC<{ favorites: string[], setFavorites: React.Dispatch<R
         </select>
         <button
           onClick={() => fetchDogs()}
-          className={`bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
+          className={`bg-blue-500 hover:bg-blue-600 text-white py-2 px-3 rounded w-full sm:w-auto ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
           disabled={loading} 
         >
           {loading ? "Loading..." : "Search"}

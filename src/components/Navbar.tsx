@@ -11,11 +11,11 @@ const Navbar: React.FC<NavbarProps> = ({ isAuthenticated, setAuth }) => {
   const navigate = useNavigate();
 
   return (
-    <nav className="bg-gray-800 text-white w-full p-4 sm:px-8 flex justify-between items-center max-w-7xl mx-auto">
-      <h1 className="text-lg font-bold cursor-pointer" onClick={() => navigate("/")}>
+    <nav className="bg-gray-800 text-white w-full p-4 sm:px-8 flex justify-between items-center max-w-10/10 mx-auto">
+      <h1 className="text-lg sm:text-xl md:text-2xl font-bold cursor-pointer" onClick={() => navigate("/")}>
         Fetch Dog App
       </h1>
-      <div className="flex flex-wrap gap-2 sm:gap-4">
+      <div className="flex flex-wrap gap-2 sm:gap-4 text-sm sm:text-base">
         {isAuthenticated && (
           <>
             <button
