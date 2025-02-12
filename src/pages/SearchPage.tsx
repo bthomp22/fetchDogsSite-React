@@ -116,9 +116,9 @@ const SearchPage: React.FC<{ favorites: string[], setFavorites: React.Dispatch<R
   };
 
   return (
-    <div className="p-6">
+    <div className="w-full min-h-screen p-6 mx-auto max-w-7xl ">
       <h1 className="text-2xl font-bold mb-4">Search Dogs</h1>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 justify-center">
         <BreedFilter breeds={breeds} selectedBreed={selectedBreed} onSelectBreed={setSelectedBreed} />
         <select
           value={sortOrder}
@@ -151,7 +151,7 @@ const SearchPage: React.FC<{ favorites: string[], setFavorites: React.Dispatch<R
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 justify-center">
         {!loading && dogs.length > 0 ? (
           dogs.map((dog) => <DogCard key={dog.id} dog={dog} onFavorite={addFavorite} isFavorited={favorites.includes(dog.id)} />)
         ) : (

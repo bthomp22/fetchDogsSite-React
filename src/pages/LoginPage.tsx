@@ -31,7 +31,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ setAuth }) => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gradient-to-r from-blue-400 to-indigo-500">
+    <div className="flex items-center justify-center h-screen w-full bg-gradient-to-r from-blue-400 to-indigo-500">
       <div className="bg-white p-8 rounded-xl shadow-2xl max-w-sm w-full text-center">
         <h1 className="text-3xl font-bold text-gray-800 mb-6">Welcome to Fetch!</h1>
         <p className="text-gray-500 mb-4">Find your perfect dog match 🐶</p>

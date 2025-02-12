@@ -3,12 +3,12 @@ import ProfilePic from "../assets/profilepic.jpg";
 
 const AboutPage: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen p-6">
+    <div className="flex flex-col items-center justify-center min-h-screen p-6">
       <h1 className="text-3xl font-bold">About the Author</h1>
-      <div className="mt-6 w-64 h-64 bg-gray-300 flex items-center justify-center rounded-full overflow-hidden">
+      <div className="mt-6 w-48 h-48 sm:w-64 sm:h-64 bg-gray-300 flex items-center justify-center rounded-full overflow-hidden">
         <img src={ProfilePic} alt="Profile" className="w-full h-full object-cover" />
       </div>
-      <p className="mt-4 text-lg text-center text-gray-700 max-w-xl">
+      <p className="mt-4 text-md sm:text-lg text-center text-gray-700 max-w-2xl leading-relaxed px-4">
         Hi, I'm Brent Thompson, a software developer from Raleigh, N.C. that is passionate about both my career and my personal life. 
         I am happily married to my wonderful wife, Bailey, and together, we share our home with two adorable French Bulldogs—Bonnie and Clyde—who are truly our fur children and are thick as thieves! 
         <br /><br />

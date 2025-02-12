@@ -24,7 +24,7 @@ const DogCard: React.FC<DogCardProps> = ({ dog, onFavorite, isFavorited }) => {
       <img
         src={imageError ? "/placeholder-dog.jpg" : dog.img}
         alt={dog.name}
-        className="w-full h-48 object-cover rounded-md"
+        className="w-full h-40 sm:h-52 md:h-64 object-contain rounded-md"
         onError={() => setImageError(true)} 
       />
 
@@ -36,7 +36,7 @@ const DogCard: React.FC<DogCardProps> = ({ dog, onFavorite, isFavorited }) => {
      
       <button
         onClick={() => onFavorite(dog.id)}
-        className={`mt-2 py-2 px-4 rounded w-full transition-colors duration-300 ${
+        className={`mt-2 py-3 px-6 rounded w-full text-sm sm:text-base lg:text-lg transition-transform transform hover:scale-105 ${
           isFavorited ? "bg-red-500 text-white" : "bg-blue-500 hover:bg-blue-600 text-white"
         }`}
       >
