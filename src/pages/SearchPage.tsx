@@ -26,7 +26,7 @@ const SearchPage: React.FC<{ favorites: string[], setFavorites: React.Dispatch<R
     next: null,
     prev: null,
   });
-  const [zipToState, setZipToState] = useState<{ [key: string]: string }>({});
+  
   const [loading, setLoading] = useState<boolean>(false); 
 
   useEffect(() => {
@@ -92,7 +92,6 @@ const SearchPage: React.FC<{ favorites: string[], setFavorites: React.Dispatch<R
         }
 
         setDogs(updatedDogs);
-        setZipToState(zipStateMap);
         setPagination({ next: response.data.next, prev: response.data.prev });
       }
     } catch (error) {
