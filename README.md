@@ -1,50 +1,17 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to My fetch dogs site! 
 
-Currently, two official plugins are available:
+To run on your computer please follow these steps.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Run "npm create vite FetchDogsApp -- --template=react-ts"
+      You can replace fetchDogsApp with whatever you want to call it
+2. Clone all my files from this repo to your machine
+3. Run "npm install"
+4. Run "npm run dev" to launch the site locally!
 
-## Expanding the ESLint configuration
+This site shows some skills with React and typescript such as Routing, State management, api calls, manipulating data from the json returned and much more! Dont forget to check out the about me page to learn more about me!
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Note: On the login page I dont save or collect the name and email, it is just required to send to get api credentials.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
