@@ -1,7 +1,7 @@
 {
   "homepage": "https://bthomp22.github.io/fetchDogsSite-React",
   "name": "fetchdogsapp",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
